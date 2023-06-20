@@ -28,8 +28,12 @@ The purpose of this project is to modify the given starter code to create an app
 
 ## Usage
 
-- It is a normal webpage and no particular instruction is needed.
-- Preview the homepage or visit the live website by
+- It is a normal website that generate secure password.
+- Click the, "Generate Password" button.
+- Then, a pop-up window will show up for you to type how many characters to include in your password between 8 characters to 128 characters.
+- Then, confirms the criteria you would like to include by clicking, "OK" or "Cancel" for 4 times.
+- Then, you will see the generated secure password based on the criteria you have selected.
+- Preview the webpage or visit the live website by
  [clicking here, JavaScript Password Generator](https://skhai77.github.io/js-password-generator/).
 
 ![Portfolio Screenshot](./assets/screenshot/ps-generator-screenshot.png)
