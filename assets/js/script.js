@@ -6,12 +6,6 @@ function generatePassword() {
   //1. Need to prompt te user for the passwrod criteria
   var userInput = window.prompt("How many characters would you like your password to contain?");
 
-  if (!userInput) {
-    return;
-  }
-
-  var userInput = userInput.window(" ");
-  }
 
   // a. Set a passworld lenght from 8 - 128.
   var minCharsLenght = "8";

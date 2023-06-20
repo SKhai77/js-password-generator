@@ -30,7 +30,7 @@ The purpose of this project is to modify the given starter code to create an app
 
 - It is a normal webpage and no particular instruction is needed.
 - Preview the homepage or visit the live website by
- [clicking here, Sian Khai's Portfolio](https://skhai77.github.io/js-password-generator/).
+ [clicking here, JavaScript Password Generator](https://skhai77.github.io/js-password-generator/).
 
 ![Portfolio Screenshot](./assets/screenshot/ps-generator-screenshot.png)
 
