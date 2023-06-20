@@ -8,6 +8,7 @@ function generatePassword() {
 
 
   // a. Set a passworld lenght from 8 - 128.
+
   var minCharsLenght = "8";
   var maxCharsLenght = "128";
 
@@ -23,13 +24,14 @@ function generatePassword() {
   var charTypes = {
     charLowerCase: "abcdefghijklmnopqrstuvwxyz",
     charUpperCase: "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
-    charNumbers: "0123456789",
-    charSymbols: "!#$%&'()*+,-./:;<=>?@[]^_`{|}~"
+    charNumber: "0123456789",
+    charSpecial: "!#$%&'()*+,-./:;<=>?@[]^_`{|}~"
   }
+
+
   //2. Needed Input validation
   // 3. Need to able to generate the password based on the criteria
 
-  // 4. Return the value
 
   return password;
 }
