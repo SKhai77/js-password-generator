@@ -11,71 +11,66 @@ var generateBtn = document.querySelector("#generate");
 
 function generatePassword() {
   
-    // a. Set a passworld lenght from 8 - 128.
-    
-    //2. Needed Input validation
-    // 3. Need to able to generate the password based on the criteria
   
-    // 4. Return the value
+var length = window.prompt("How many characters would you like your password to contain?");
 
-  //1. Need to prompt te user for the passwrod criteria
-var generatePasswordOptions = window.prompt("How many characters would you like your password to contain?");
-
-  window.confirm("Click OK to confirm including Special characters.");
-
-  window.confirm("Click OK to confirm including Numeric characters.");
-
-  window.confirm("Click OK to confirm including Lowercase characters.");
-  
-  window.confirm("Click OK to confirm including Uppercase characters.");
-
-
-  
- 
-function getRandom(arr) {
-  var randomIndex = Math.floor(Math.random * arr.length);
-  var randomElement = arr[randomIndex];
-
-  return randomElement;
-
+if (length < 8) {
+  alert('Password length must be at least 8 characters');
+  return null;
 }
-function generatePassword() {
-  var options = generatePasswordOptions();
-  var result = [];
+
+
+if (length > 128) {
+  alert('Password length must less than 129 characters');
+  return null;
+}
+
+
+var specChars = window.confirm("Click OK to confirm including Special characters.");
+
+var Numbers = window.confirm("Click OK to confirm including Numeric characters.");
+
+var lowerChars = window.confirm("Click OK to confirm including Lowercase characters.");
+  
+var upperChars = window.confirm("Click OK to confirm including Uppercase characters.");
+
+
+  
+
   var possibleCharacters = [];
-  var randomCharacters = [];
 
-  if (!options) return null;
-  if (options.hasSpecialCharacters)
-  {
+  let password = ''
+  
+  if (specChars == true){
+    possibleCharacters = possibleCharacters.concat(charSpecial)
+    
+  }
+  if (lowerChars == true){
     possibleCharacters = possibleCharacters.concat(charLowerCase)
-    randomCharacters.push(getRandom(charLowerCase));
+    
   }
   
-  if (options.hasUpperCase)
-  {
+  if (upperChars == true){
     possibleCharacters = possibleCharacters.concat(charUpperCase)
-    randomCharacters.push(getRandom(charUpperCase));
+
   }
-  if (options.hasCharNumbers)
-  {
+  if (Numbers == true){
     possibleCharacters = possibleCharacters.concat(charNumbers)
-    randomCharacters.push(getRandom(charNumbers));
+    
   }
 
-  for (var i = 0; i <options.length; i++) {
-    var possibleCharacter = getRandom(possibleCharacters);
-    result.push(possibleCharacter);
 
-  }
-for (var i = 0; i <randomCharacters.length; i++) {
-  result[i] = randomCharacters[i]
+
+for (var i = 0; i < Number(length); i++) {
+
+  var randomIndex = Math.floor(Math.random() * possibleCharacters.length);
+ 
+  var randomElement = possibleCharacters[randomIndex];
+
+  password += randomElement;
 
 }
-return result.join("");
-
-}
-
+console.log(password)
 
   return password;
 }
@@ -90,6 +85,3 @@ function writePassword() {
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
-
-
-  
